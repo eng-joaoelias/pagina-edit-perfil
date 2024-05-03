@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     // JSON com os dados iniciais
-    const dadosIniciais = [{
-        "nome": "Enzo Renan",
-        "sobrenome": "da Cruz",
-        "email": "enzorenandacruz@torrez.com.br",
+    const dadosUsuario = [{
+        "nome": "Ian Kevin Santos",
+        "idade": 27,
+        "email": "ian_kevin_santos@jetstar.com.br",
         "telefone": "+5565986156150",
-        "endereco": "Rua Curiangu, 253, CPA IV, Cuiabá, MT, 78058-246"
+        "endereco": "Rua Curiangu, 253, CPA IV, Cuiabá, MT, 78058-246",
+        "bio": "Especialista em Desenvolvimento Web e Front-End com conhecimentos em HTML, CSS e JavaScript. Apaixonado por criar experiências digitais incríveis. #DesenvolvimentoWeb #FrontEnd #HTML #CSS #JavaScript"
     }];
 
     // Preenchendo os campos com os dados do JSON
@@ -15,13 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
     //const estilosOriginaisDadosEntrada = window.getComputedStyle(camposConta);
 
     function definicaoValoresIniciais() {
-        perfilTitulo.textContent = `${dadosIniciais[0].nome} ${dadosIniciais[0].sobrenome}`;
-        perfilEmail.textContent = dadosIniciais[0].email;
-        camposConta[0].value = dadosIniciais[0].nome;
-        camposConta[1].value = dadosIniciais[0].sobrenome;
-        camposConta[2].value = dadosIniciais[0].email;
-        camposConta[3].value = dadosIniciais[0].telefone;
-        camposConta[4].value = dadosIniciais[0].endereco;
+        perfilTitulo.textContent = `${dadosUsuario[0].nome}`;
+        perfilEmail.textContent = dadosUsuario[0].email;
+        camposConta[0].value = dadosUsuario[0].nome;
+        camposConta[1].value = dadosUsuario[0].idade;
+        camposConta[2].value = dadosUsuario[0].email;
+        camposConta[3].value = dadosUsuario[0].telefone;
+        camposConta[4].value = dadosUsuario[0].endereco;
+        camposConta[5].value = dadosUsuario[0].bio;
+    }
+
+    function mudaDadosUsuario() {
+        dadosUsuario[0].nome = camposConta[0].value;
+        dadosUsuario[0].idade = camposConta[1].value;
+        dadosUsuario[0].email = camposConta[2].value;
+        dadosUsuario[0].telefone = camposConta[3].value;
+        dadosUsuario[0].endereco = camposConta[4].value;
+        dadosUsuario[0].bio = camposConta[5].value;
     }
 
     definicaoValoresIniciais();
@@ -50,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 campo.classList.remove("com-borda");
             });
 
-            perfilTitulo.textContent = camposConta[0].value + " " + camposConta[1].value;
-            perfilEmail.textContent = camposConta[2].value;
+            mudaDadosUsuario();
+            definicaoValoresIniciais();
 
             // Alterando o texto do botão para "Salvar"
             btnSalva.textContent = 'Editar';
@@ -63,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 campo.classList.remove("sem-borda");
                 campo.classList.add("com-borda");
             });
+
+            definicaoValoresIniciais();
 
             // Alterando o texto do botão para "Editar"
             btnSalva.textContent = 'Salvar';
@@ -77,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             campo.classList.add("sem-borda");
             campo.classList.remove("com-borda");
         });
+        definicaoValoresIniciais();
         btnCancela.style.display = "none";
         btnSalva.textContent = 'Editar';
     });
