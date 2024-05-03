@@ -222,4 +222,10 @@ body {
     .input-container input {
         margin-right: 10px;
     }
+    
+    .input-container textarea {
+        display: block;
+        width: auto;
+        margin-right: 10px;
+    }
 }
