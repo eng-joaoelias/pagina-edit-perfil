@@ -155,3 +155,16 @@ body {
     flex-direction: column;
     margin: 0 20px;
 }
+
+.input-container label {
+    font-family: 'Poppins', sans-serif;
+    color: #768499;
+    font-size: 14px;
+}
+
+.input-container input {
+    height: 25px;
+    border: 1.5px solid #768499;
+    border-radius: 5px;
+    padding: 5px;
+}
