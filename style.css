@@ -75,4 +75,52 @@ body {
 
 .menu-link:first-child:hover {
     background-color: #536dfe;
+    color: #fff;
+}
+
+.conta {
+    flex: 2;
+    margin-left: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    height: max-content;
+}
+
+.conta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #768499;
+}
+
+.conta-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #1e293b;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.btn-container {
+    margin-right: 5px;
+}
+
+.btn-cancela {
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid #768499;
+    border-radius: 2em;
+    color: #1e293b;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fff;
+    transition-duration: 0.32s;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.btn-cancela:hover {
+    background-color: #f1f5f9;
 }
