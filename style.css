@@ -209,4 +209,17 @@ body {
     .conta-header {
         flex-direction: column;
     }
+
+    .conta-edit {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .input-container {
+        margin: 10px;
+    }
+
+    .input-container input {
+        margin-right: 10px;
+    }
 }
