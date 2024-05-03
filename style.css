@@ -49,5 +49,11 @@ body {
 }
 
 .menu-link {
-    
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #768499;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
 }
