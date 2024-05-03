@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const perfilTitulo = document.querySelector('.perfil-titulo');
     const perfilEmail = document.querySelector('.perfil-email');
     const camposConta = document.querySelectorAll('.conta input, .conta textarea');
+    //const estilosOriginaisDadosEntrada = window.getComputedStyle(camposConta);
 
     function definicaoValoresIniciais() {
         perfilTitulo.textContent = `${dadosIniciais[0].nome} ${dadosIniciais[0].sobrenome}`;
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     definicaoValoresIniciais();
 
-    // Bloqueando os campos do formulário de conta
+    // Bloqueando os campos do formulário de conta e removendo as bordas dos campos para edicao
     camposConta.forEach(function (campo) {
         campo.setAttribute('readonly', 'true');
     });
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Capturando o botão "btn-cancela"
     const btnCancela = document.querySelector(".btn-cancela");
+    btnCancela.style.display = "none";
 
     // Adicionando um evento de clique ao botão "btn-salva"
     btnSalva.addEventListener('click', function (event) {
@@ -44,25 +46,27 @@ document.addEventListener('DOMContentLoaded', function () {
             // Habilitando a edição dos campos do formulário de conta
             camposConta.forEach(function (campo) {
                 campo.setAttribute('readonly', 'true');
+                campo.classList.add("sem-borda");
+                campo.classList.remove("com-borda");
             });
-
-            console.log("clicou pra salvar");
 
             perfilTitulo.textContent = camposConta[0].value + " " + camposConta[1].value;
             perfilEmail.textContent = camposConta[2].value;
 
             // Alterando o texto do botão para "Salvar"
             btnSalva.textContent = 'Editar';
+            btnCancela.style.display = "none";
         } else {
             // Bloqueando a edição dos campos do formulário de conta
             camposConta.forEach(function (campo) {
                 campo.removeAttribute('readonly');
+                campo.classList.remove("sem-borda");
+                campo.classList.add("com-borda");
             });
-
-            console.log("clicou pra editar");
 
             // Alterando o texto do botão para "Editar"
             btnSalva.textContent = 'Salvar';
+            btnCancela.style.display = "block";
         }
     });
 
@@ -70,7 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         camposConta.forEach(function (campo) {
             campo.setAttribute('readonly', 'true');
+            campo.classList.add("sem-borda");
+            campo.classList.remove("com-borda");
         });
+        btnCancela.style.display = "none";
         btnSalva.textContent = 'Editar';
     });
 });
