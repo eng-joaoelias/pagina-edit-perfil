@@ -167,4 +167,11 @@ body {
     border: 1.5px solid #768499;
     border-radius: 5px;
     padding: 5px;
+    color: #768499;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-container input:focus {
+    outline: none;
+    border: 1.5px solid #536dfe;
 }
