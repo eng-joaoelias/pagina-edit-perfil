@@ -195,15 +195,20 @@ body {
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: center; /* Adicionando alinhamento central */
     }
 
     .perfil {
         margin-bottom: 20px;
         margin-right: 0;
+        width: 70vw;
+        align-self: center; /* Centralizando a div perfil */
     }
 
     .conta {
         margin: 0;
+        width: 70vw;
+        align-self: center; /* Centralizando o formulário conta */
     }
 
     .conta-header {
