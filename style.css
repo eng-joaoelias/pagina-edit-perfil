@@ -57,3 +57,11 @@ body {
     margin: 10px;
     border-radius: 10px;
 }
+
+.menu-icon {
+    margin-right: 10px;
+}
+
+.menu-link:first-child {
+    color: #fff;
+}
