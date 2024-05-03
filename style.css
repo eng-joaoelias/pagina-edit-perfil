@@ -70,5 +70,9 @@ body {
 
 .menu-link:hover {
     background-color: #f1f5f9;
-    
+    color: #1e293b;
+}
+
+.menu-link:first-child:hover {
+    background-color: #536dfe;
 }
