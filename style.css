@@ -124,3 +124,34 @@ body {
 .btn-cancela:hover {
     background-color: #f1f5f9;
 }
+
+.btn-salva {
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid #458ff6;
+    border-radius: 2em;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: #536dfe;
+    transition-duration: 0.32s;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.btn-salva:hover {
+    background-color: #4053c9;
+}
+
+.conta-edit {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
