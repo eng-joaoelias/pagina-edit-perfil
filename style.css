@@ -64,4 +64,11 @@ body {
 
 .menu-link:first-child {
     color: #fff;
+    background-color: #536dfe;
+
+}
+
+.menu-link:hover {
+    background-color: #f1f5f9;
+    
 }
